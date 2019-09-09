@@ -1,6 +1,6 @@
-## Docker
+# Docker
 
-### Use Cloud SQL with the google proxy side container
+## Use Cloud SQL with the google proxy side container
 In order to proxify a cloudSQL POSTGRES instance in a sideContainer, you will need a service account with one of this roles :
 * Cloud SQL > Cloud SQL Client
 * Cloud SQL > Cloud SQL Editor
