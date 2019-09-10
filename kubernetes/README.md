@@ -3,7 +3,9 @@
 ## Telepresence
 ### Installation
 Just follow the script given on https://www.telepresence.io/reference/install
+```
 curl -s https://packagecloud.io/install/repositories/datawireio/telepresence/script.deb.sh | sudo bash sudo apt install --no-install-recommends telepresence
+```
 
 ### Use to debug your local service
 

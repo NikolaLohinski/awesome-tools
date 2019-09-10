@@ -10,4 +10,4 @@ _This repository holds everything I thought interesting keeping record of._
 - [VueJS](/vue-js)
 
 ## Other
-- [Miscellaneous](/miscellaneous) 
+- [Utilities](/utilities) 
