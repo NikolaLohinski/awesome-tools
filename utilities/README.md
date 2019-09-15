@@ -3,6 +3,9 @@
 ## Bash
 - Very useful [aliases](./.bash_aliases)
 
+## Git
+- Git [config](./.gitconfig)
+
 ## Node utilities
 - Node [`swagger-ui-watcher`](https://github.com/moon0326/swagger-ui-watcher) with hot reload feature to serve a rendered swagger HTML
 

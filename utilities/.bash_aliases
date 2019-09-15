@@ -7,6 +7,8 @@ alias .....="cd ../../../.."
 
 alias e="nano"
 
+alias morewatchers="echo fs.inotify.max_user_watches=524288 | sudo tee /etc/sysctl.d/40-max-user-watches.conf && sudo sysctl --system"
+
 # Python
 alias pp="python -mjson.tool"
 alias serve="python -m SimpleHTTPServer 8888"

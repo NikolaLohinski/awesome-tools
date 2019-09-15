@@ -1,0 +1,21 @@
+[user]
+	name = Agent K
+	email = nikolalohinski@gmail.com
+[alias]
+	ck = checkout
+	rb = rebase
+	st = status
+	ft = fetch	
+	pl = pull
+	ph = push
+	cm = commit
+	cmnd = commit --amend
+	frc = push --force-with-lease
+	wip = commit -m 'wip'
+	review = commit -m 'fix: code review'
+	obliviate = reset --hard
+	prev = checkout HEAD^1
+	next = "!sh -c 'git log --reverse --pretty=%H master | awk \"/$(git rev-parse HEAD)/{getline;print}\" | xargs git checkout'"
+	fxp = rebase -i HEAD~10
+[core]
+	editor = nano
