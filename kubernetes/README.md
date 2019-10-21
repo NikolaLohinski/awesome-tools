@@ -1,5 +1,9 @@
 # Kubernetes
 
+## Content
+* [Telepresence](#telepresence)
+* [Kubernetes context - `kubectx`](#kubernetes-context)
+
 ## Telepresence
 ### Installation
 Just follow the script given on https://www.telepresence.io/reference/install
@@ -29,3 +33,7 @@ The following command is used to replace the format-worker deployment:
 telepresence --also-proxy 192.168.1.249 --also-proxy 192.168.1.250 --swap-deployment format-worker
 ```
 In the case of an non-worker pod, you must add --expose 8080 to bind the port in the cluster
+
+## Kubernetes context
+
+Switch faster between clusters and namespaces in kubectl with [kubectx](https://kubectx.dev).
