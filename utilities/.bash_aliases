@@ -4,10 +4,14 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-
-alias e="nano"
-
+# Add more watchers in case the limit is reached with tools such as webpack
 alias morewatchers="echo fs.inotify.max_user_watches=524288 | sudo tee /etc/sysctl.d/40-max-user-watches.conf && sudo sysctl --system"
+# Editor
+alias e="nano"
+# Fast command line copy to clipboard (use as such toclipboard '...command...')
+toclipboard() {
+  eval "$1" | xclip -selection c
+}
 
 # Python
 alias pp="python -mjson.tool"
