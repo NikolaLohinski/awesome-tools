@@ -31,7 +31,6 @@ complete -F _docker_compose dkcmp
 # Kubernetes
 alias k="kubectl"
 source <(kubectl completion bash | sed 's/kubectl/k/g')
-alias kctx="kubectx"
 
 # Gcloud
 alias g="gcloud"
