@@ -38,3 +38,8 @@ source <(kubectl completion bash | sed 's/kubectl/k/g')
 
 # Gcloud
 alias g="gcloud"
+
+# Cheat sheet
+function cheat() {
+  curl cht.sh/$1
+}
