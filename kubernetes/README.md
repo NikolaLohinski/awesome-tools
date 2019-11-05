@@ -3,6 +3,7 @@
 ## Content
 * [Telepresence](#telepresence)
 * [Kubernetes context - `kubectx`](#kubernetes-context)
+* [K9S](#k9s)
 
 ## Telepresence
 ### Installation
@@ -37,3 +38,7 @@ In the case of an non-worker pod, you must add --expose 8080 to bind the port in
 ## Kubernetes context
 
 Switch faster between clusters and namespaces in kubectl with [kubectx](https://kubectx.dev).
+
+## K9S
+
+[K9s](https://github.com/derailed/k9s) provides a curses based terminal UI to interact with your Kubernetes clusters. The aim of this project is to make it easier to navigate, observe and manage your applications in the wild. K9s continually watches Kubernetes for changes and offers subsequent commands to interact with observed Kubernetes resources.
