@@ -33,10 +33,6 @@ My git [configuration](./.gitconfig)
 <ol>
 <li> 
 
-Node [swagger-ui-watcher](https://github.com/moon0326/swagger-ui-watcher) with hot reload feature to serve a rendered swagger HTML
-
-<li> 
-
 [Node Version Manager](https://github.com/nvm-sh/nvm) : POSIX-compliant bash script to manage multiple active `node.js` & `npm` versions
 </ol>
 
@@ -44,19 +40,11 @@ Node [swagger-ui-watcher](https://github.com/moon0326/swagger-ui-watcher) with h
 <ol>
 <li> 
 
-Convert OpenAPI definitions into `json` schemas for all types in the API with [openapi2jsonschema](https://github.com/instrumenta/openapi2jsonschema)
-
-<li> 
-
-[virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/) is a set of extensions to [virtualenv](https://virtualenv.pypa.io/en/latest/) tool. The extensions include wrappers for creating and deleting virtual environments and otherwise managing your development workflow.
+[virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/) is a set of extensions to [virtualenv](https://virtualenv.pypa.io/en/latest/) tool. The extensions include wrappers for creating and deleting virtual environments and otherwise managing your development workflow
 </ol>
 
 ## Other
 <ol>
-<li> 
-
-Render very nice customizable swaggers in `HTML` with [redoc](https://github.com/Redocly/redoc).
-
 <li>
 
  Simplest terminal-friendly programming cheat sheet ever invented: [cheat.sh](https://cheat.sh/). 
