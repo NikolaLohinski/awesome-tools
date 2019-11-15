@@ -2,6 +2,7 @@
 
 ## Content
 * [Bash](#bash)
+* [Browser](#browser)
 * [Git](#git)
 * [Node](#node)
 * [Python](#python)
@@ -20,6 +21,14 @@
 <li>
 
  [bash-git-prompt](https://github.com/magicmonty/bash-git-prompt) : An informative and fancy bash prompt for `git` users
+</ol>
+
+## Browser
+<ol>
+<li>
+
+ Vimium for [Chrome](http://vimium.github.io/) or [Firefox](https://addons.mozilla.org/fr/firefox/addon/vimium-ff/) to browse the web with your keyboard. 
+
 </ol>
 
 ## Git
