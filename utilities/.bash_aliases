@@ -12,6 +12,8 @@ alias e="nano"
 toclipboard() {
   eval "$1" | xclip -selection c
 }
+# Get now time formatted in RFC3339
+alias now="date --rfc-3339=ns | sed 's/ /T/; s/\(\....\).*\([+-]\)/\1\2/g'"
 
 # Python
 alias pp="python -mjson.tool"
