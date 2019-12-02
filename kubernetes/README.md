@@ -4,6 +4,7 @@
 * [Telepresence](#telepresence)
 * [Kubernetes context - `kubectx`](#kubernetes-context)
 * [K9S](#k9s)
+* [Kubernetes in Docker](#kubernetes-in-docker)
 
 ## Telepresence
 ### Installation
@@ -42,3 +43,7 @@ Switch faster between clusters and namespaces in kubectl with [kubectx](https://
 ## K9S
 
 [K9s](https://github.com/derailed/k9s) provides a curses based terminal UI to interact with your Kubernetes clusters. The aim of this project is to make it easier to navigate, observe and manage your applications in the wild. K9s continually watches Kubernetes for changes and offers subsequent commands to interact with observed Kubernetes resources.
+
+## Kubernetes in Docker
+
+[`kind`](https://github.com/kubernetes-sigs/kind) is a very useful tool for running local Kubernetes clusters using Docker container "nodes".
