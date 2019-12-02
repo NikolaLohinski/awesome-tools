@@ -29,6 +29,10 @@
 
  Vimium for [Chrome](http://vimium.github.io/) or [Firefox](https://addons.mozilla.org/fr/firefox/addon/vimium-ff/) to browse the web with your keyboard. 
 
+<li>
+
+ [JSON Viewer awesome](https://chrome.google.com/webstore/detail/json-viewer-awesome/iemadiahhbebdklepanmkjenfdebfpfe) for Chrome only to visualize and json files in a very nice way
+
 </ol>
 
 ## Git
