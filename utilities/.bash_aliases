@@ -12,6 +12,13 @@ alias e="nano"
 toclipboard() {
   eval "$1" | xclip -selection c
 }
+frombase64(){
+  echo $1 | base64 --decode | toclipboard
+}
+tobase64(){
+  echo $1 | base64 | toclipboard
+}
+
 # Get now time formatted in RFC3339
 alias now="date --rfc-3339=ns | sed 's/ /T/; s/\(\....\).*\([+-]\)/\1\2/g'"
 
