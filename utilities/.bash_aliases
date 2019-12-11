@@ -23,8 +23,8 @@ tobase64(){
 alias now="date --rfc-3339=ns | sed 's/ /T/; s/\(\....\).*\([+-]\)/\1\2/g'"
 
 # Python
-alias pp="python -mjson.tool"
-alias serve="python -m SimpleHTTPServer 8888"
+alias pp="python2 -mjson.tool"
+alias serve="python3 -m server.http"
 
 # Go
 gopath() {
