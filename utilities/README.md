@@ -21,6 +21,19 @@
 <li>
 
  [bash-git-prompt](https://github.com/magicmonty/bash-git-prompt) : An informative and fancy bash prompt for `git` users
+
+<li>
+
+To dump multiline inputs into a file directly from a terminal, one needs to use `<<` operator as such:
+```
+$ cat << EOF > filename.yml
+...
+content:
+  of: "file"
+...
+EOF
+```
+
 </ol>
 
 ## Browser
@@ -60,17 +73,18 @@ My git [configuration](./.gitconfig)
 <ol>
 <li>
 
- Simplest terminal-friendly programming cheat sheet ever invented: [cheat.sh](https://cheat.sh/). 
+Simplest terminal-friendly programming cheat sheet ever invented: [cheat.sh](https://cheat.sh/).
     
 Used with curl as such : 
     
 ```
-curl cheat.sh/<TOPIC>/<QUERY>
+$ curl cheat.sh/<TOPIC>/<QUERY>
 ```
 
 Example: 
 
 ```
-curl cheat.sh/go/python+use+environment+variable
+$ curl cheat.sh/go/python+use+environment+variable
 ```
-<ol>
+
+</ol>
