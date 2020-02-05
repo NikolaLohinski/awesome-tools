@@ -1,10 +1,10 @@
 # Kubernetes
 
 ## Content
-* [Telepresence](#telepresence)
-* [Kubernetes context - `kubectx`](#kubernetes-context)
-* [K9S](#k9s)
-* [Kubernetes in Docker](#kubernetes-in-docker)
+- [Telepresence](#telepresence)
+- [Kubernetes context - `kubectx`](#kubernetes-context)
+- [K9S](#k9s)
+- [Kubernetes in Docker](#kubernetes-in-docker)
 
 ## Telepresence
 ### Installation
