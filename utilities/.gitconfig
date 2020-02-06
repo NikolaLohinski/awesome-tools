@@ -1,5 +1,5 @@
 [user]
-	name = Agent K
+	name = Nikola Lohinski
 	email = nikolalohinski@gmail.com
 [alias]
 	ck = checkout
@@ -7,11 +7,12 @@
 	st = status
 	ft = fetch	
 	pl = pull
+	plr = pull --rebase
 	ph = push
 	cm = commit
 	cmnd = commit --amend
 	frc = push --force-with-lease
-	wip = commit -m 'wip'
+	wip = commit -m 'WIP: ⚠️ DO NOT MERGE THIS COMMIT ⚠️'
 	review = commit -m 'fix: code review'
 	obliviate = reset --hard
 	prev = checkout HEAD^1
@@ -19,3 +20,5 @@
 	fxp = rebase -i HEAD~10
 [core]
 	editor = nano
+[push]
+    default = current
