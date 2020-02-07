@@ -18,6 +18,7 @@
 	prev = checkout HEAD^1
 	next = "!sh -c 'git log --reverse --pretty=%H master | awk \"/$(git rev-parse HEAD)/{getline;print}\" | xargs git checkout'"
 	fxp = rebase -i HEAD~10
+	hist = log --pretty=format:'%Cred%h%Creset %C(yellow)<%an>%Creset %s %Cgreen(%cr)' --abbrev-commit
 [core]
 	editor = nano
 [push]
