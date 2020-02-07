@@ -22,4 +22,4 @@
 [core]
 	editor = nano
 [push]
-    default = current
+        default = current
