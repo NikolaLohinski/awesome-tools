@@ -7,6 +7,7 @@
 - [Node](#node)
 - [Python](#python)
 - [Other](#other)
+- [i3](#i3)
 
 ## Shell
 1. Bash [aliases](./.bash_aliases)
@@ -28,8 +29,6 @@
 
 1. [`entr`](https://github.com/eradman/entr) is a nice independent utility for running arbitrary commands when files change ;
 
-
-</ol>
 
 ## Browser
 1. Vimium for [Chrome](http://vimium.github.io/) or [Firefox](https://addons.mozilla.org/fr/firefox/addon/vimium-ff/) to browse the web with your keyboard ;
@@ -60,3 +59,7 @@
    ```
    $ curl cheat.sh/go/python+use+environment+variable
    ```
+
+## i3
+1. My i3 [configuration](./.i3/config) ;
+
