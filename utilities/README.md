@@ -59,6 +59,7 @@
    ```
    $ curl cheat.sh/go/python+use+environment+variable
    ```
+1. [`balenaEtcher`](https://www.balena.io/etcher/) is a very simple tool to flash USB keys into bootable drives
 
 ## i3
 1. My i3 [configuration](./.i3/config) ;
