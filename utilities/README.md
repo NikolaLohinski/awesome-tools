@@ -1,4 +1,4 @@
-# Utilities
+/home/agent-k# Utilities
 
 ## Content
 - [Shell](#shell)
@@ -37,7 +37,10 @@
 
 ## Git
 1. My git [configuration](./.gitconfig) ;
+
 1. A command line tool to interact with a Gitlab repository, making it simple to clone, fork, including seamless workflow for creating merge requests, issues and snippets: [lab](https://github.com/zaquestion/lab) ;
+
+1. A nice plugin to bash providing contextual git information : [bash-git-prompt](https://github.com/magicmonty/bash-git-prompt) ;
 
 ## Node
 1. [Node Version Manager](https://github.com/nvm-sh/nvm) : POSIX-compliant bash script to manage multiple active `node.js` & `npm` versions ;
