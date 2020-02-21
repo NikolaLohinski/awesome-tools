@@ -83,6 +83,8 @@
    ```
 1. [`balenaEtcher`](https://www.balena.io/etcher/) is a very simple tool to flash USB keys into bootable drives
 
+1. To share files via P2P on a local network, one should use [ShareDrop](https://www.sharedrop.io/)
+
 ## i3
 1. My i3 [configuration](./.i3/config) ;
 
