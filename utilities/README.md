@@ -1,4 +1,4 @@
-/home/agent-k# Utilities
+# Utilities
 
 ## Content
 - [Shell](#shell)
@@ -13,8 +13,6 @@
 1. Bash [aliases](./.bash_aliases)
 
 1. [fzf](https://github.com/junegunn/fzf) : an interactive Unix filter fuzzy finder for command-line that can be used with any list; files, command history, processes, hostnames, etc... ;
-
-1. [bash-git-prompt](https://github.com/magicmonty/bash-git-prompt) : An informative and fancy bash prompt for `git` users ;
 
 1. To dump multiline inputs into a file directly from a terminal, one needs to use `<<` operator as such:
    ```
