@@ -45,6 +45,8 @@
    ```
    Moreover, you need to make sure that no other file such as `~/.profile` or `~/.bash_profile` sets `HISTFILESIZE` or `HISTSIZE` environment variables.
 
+1. [`direnv`](https://direnv.net/) is a shell extension. It adds a new feature that can load and unload environment variables depending on the current directory.
+
 ## Browser
 1. Vimium for [Chrome](http://vimium.github.io/) or [Firefox](https://addons.mozilla.org/fr/firefox/addon/vimium-ff/) to browse the web with your keyboard ;
 
