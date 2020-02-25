@@ -55,6 +55,16 @@
 ## Git
 1. My git [configuration](./.gitconfig) ;
 
+1. To have a global `.gitignore` file accross the environment, create a `.gitignore` in your home directory, and run: 
+   ```
+   $ git config --global core.excludesfile ~/.gitignore
+   ```
+   This will create the following entry in your `.gitconfig`:
+   ```
+   [core]
+         excludesfile = {path-to-home}/.gitignore
+   ```
+
 1. A command line tool to interact with a Gitlab repository, making it simple to clone, fork, including seamless workflow for creating merge requests, issues and snippets: [lab](https://github.com/zaquestion/lab) ;
 
 1. A nice plugin to bash providing contextual git information : [bash-git-prompt](https://github.com/magicmonty/bash-git-prompt) ;
