@@ -67,6 +67,8 @@
 
 1. A command line tool to interact with a Gitlab repository, making it simple to clone, fork, including seamless workflow for creating merge requests, issues and snippets: [lab](https://github.com/zaquestion/lab) ;
 
+1. A command line tool to interact with a Github repository: [`hub`](https://hub.github.com/) 
+
 1. A nice plugin to bash providing contextual git information : [bash-git-prompt](https://github.com/magicmonty/bash-git-prompt) ;
 
 1. Git [autocompletion](https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash) for bash ;
