@@ -36,6 +36,11 @@ gopath() {
 goroot() {
   export GOROOT=$(readlink -f $1)
 }
+covergo(){
+  go test $1 -coverprofile=/tmp/coverage.out
+  go tool cover -html=/tmp/coverage.out -o /tmp/coverage.html
+  google-chrome-stable /tmp/coverage.html &
+}
 
 # Docker
 alias dk-rm="docker rm -vf $(docker ps -a -q)"
