@@ -15,7 +15,7 @@
 1. [fzf](https://github.com/junegunn/fzf) : an interactive Unix filter fuzzy finder for command-line that can be used with any list; files, command history, processes, hostnames, etc... ;
 
 1. To dump multiline inputs into a file directly from a terminal, one needs to use `<<` operator as such:
-   ```
+   ```bash
    $ cat << EOF > filename.yml
    ...
    content:
@@ -28,7 +28,7 @@
 1. [`entr`](https://github.com/eradman/entr) is a nice independent utility for running arbitrary commands when files change ;
 
 1. To have eternal history in bash, add the following to your `~/.bashrc`:
-   ```
+   ```bash
    # Eternal bash history.
    # ---------------------
    # Undocumented feature which sets the size to "unlimited".
@@ -84,18 +84,31 @@
 
    Used with curl as such :
 
-   ```
+   ```bash
    $ curl cheat.sh/<TOPIC>/<QUERY>
    ```
 
    Example:
 
-   ```
+   ```bash
    $ curl cheat.sh/go/python+use+environment+variable
    ```
 1. [`balenaEtcher`](https://www.balena.io/etcher/) is a very simple tool to flash USB keys into bootable drives
 
 1. To share files via P2P on a local network, one should use [ShareDrop](https://www.sharedrop.io/)
+
+1. If using Jetbrains products such as Goland, or Idea, and upgrading them with Jetbrains Toolbox, the executables are not accessible directly in the path. To make a dynamic link to the latest downloaded Pycharm (for example) version, proceed as follows:
+   ```bash
+   $ su
+   $ cat << EOF > /usr/local/bin/pycharm
+   
+   #!/bin/sh
+   exec $(ls -t -d $HOME/.local/share/JetBrains/Toolbox/apps/PyCharm-P/ch-*/*/ | head -n 1)bin/pycharm.sh
+   
+   EOF
+
+   $ exit 
+   ```
 
 ## i3
 1. My Manjaro i3 [configuration](./i3/manjaro) ;
