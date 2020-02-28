@@ -98,5 +98,5 @@
 1. To share files via P2P on a local network, one should use [ShareDrop](https://www.sharedrop.io/)
 
 ## i3
-1. My i3 [configuration](./.i3/config) ;
+1. My Manjaro i3 [configuration](./i3/manjaro) ;
 
