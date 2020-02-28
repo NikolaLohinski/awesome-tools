@@ -5,7 +5,7 @@
 	ck = checkout
 	rb = rebase
 	st = status
-	ft = fetch	
+	ft = fetch
 	pl = pull
 	plr = pull --rebase
 	ph = push
@@ -21,5 +21,6 @@
 	hist = log --pretty=format:'%Cred%h%Creset %C(yellow)<%an>%Creset %s %Cgreen(%cr)' --abbrev-commit
 [core]
 	editor = nano
+	excludesfile = /home/agent-k/.gitignore
 [push]
-        default = current
+    default = current
