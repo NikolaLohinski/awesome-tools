@@ -103,8 +103,7 @@
    $ cat << EOF > /usr/local/bin/pycharm
    
    #!/bin/sh
-   exec $(ls -t -d $HOME/.local/share/JetBrains/Toolbox/apps/PyCharm-P/ch-*/*/ | head -n 1)bin/pycharm.sh
-   
+   exec $(ls -t -d $HOME/.local/share/JetBrains/Toolbox/apps/PyCharm-P/ch-*/*/ | grep -v ".plugins" | head -n 1)bin/pycharm.sh
    EOF
 
    $ exit 
