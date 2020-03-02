@@ -226,7 +226,7 @@ mode "resize" {
 bindsym $mod+F4 mode "$mode_ide"
 set $mode_ide (c)lion, (w)ebstorm, (g)oland, (i)dea, (p)ycharm, (v)scode
 mode "$mode_ide" {
-    bindsym c exec clionv, mode "default"
+    bindsym c exec clion, mode "default"
     bindsym w exec webstorm, mode "default"
     bindsym g exec goland, mode "default"
     bindsym i exec idea, mode "default"
