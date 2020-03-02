@@ -109,6 +109,8 @@
    $ exit 
    ```
 
-## i3
-1. My Manjaro i3 [configuration](./i3/manjaro) ;
+## `i3`
+1. My i3 configurations:
+  * For [Manjaro](./i3/manjaro) ;
+  * For [Ubuntu](./i3/ubuntu) ;
 
