@@ -3,6 +3,7 @@
 	email = nikolalohinski@gmail.com
 [alias]
 	ck = checkout
+	ckb = checkout -b
 	rb = rebase
 	st = status
 	ft = fetch
