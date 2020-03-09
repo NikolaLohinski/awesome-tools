@@ -20,6 +20,7 @@
     - [Vue.js](#vuejs)
   - [Python](#python)
   - [Git](#git)
+  - [Rust](#rust)
 - [Documentation](#documentation)
   - [Swagger](#swagger)
   - [Code resources](#code-resources)
@@ -171,6 +172,11 @@
 1. A nice plugin to bash providing contextual git information : [bash-git-prompt](https://github.com/magicmonty/bash-git-prompt) ;
 
 1. Git [autocompletion](https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash) for bash ;
+
+### Rust
+1. [`gotham`](https://gotham.rs/) is a flexible web framework that promotes stability, safety, security and speed. The documentation is
+full of _almost ready-to-use_ examples which make it a very user-friendly framework.
+
 
 ## Documentation
 ### Swagger
