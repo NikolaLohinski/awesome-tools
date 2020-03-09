@@ -9,9 +9,6 @@
 
 # Awesome tools [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
-- [Containers](#containers)
-  - [Docker](#docker)
-  - [Kubernetes](#kubernetes)
 - [Languages & frameworks](#languages-and-frameworks)
   - [Shell](#shell)
   - [Golang](#golang)
@@ -21,6 +18,9 @@
   - [Python](#python)
   - [Git](#git)
   - [Rust](#rust)
+- [Containers](#containers)
+  - [Docker](#docker)
+  - [Kubernetes](#kubernetes)
 - [Documentation](#documentation)
   - [Swagger](#swagger)
   - [Code resources](#code-resources)
@@ -29,70 +29,7 @@
   - [Desktop](#desktop)
   - [Software](#software)
   
-
-## Containers
-### Docker
-1. **Use Cloud SQL with the google proxy side container**:
-    In order to proxify a cloudSQL POSTGRES instance in a sideContainer, you will need a service account with one of this roles :
-    * Cloud SQL > Cloud SQL Client
-    * Cloud SQL > Cloud SQL Editor
-    * Cloud SQL > Cloud SQL Admin
-    
-    Once this service account is created, you will need a service-account key to be available locally. To generate one, 
-    go to the IAM page of this service account (GCP console > IAM & admin > Service accounts), generate one and download it.
-    
-    Retrieve the Instance Connection Name field: 
-    * Go to GCP console > SQL
-    * Select the instance you want to access to
-    * In the `Overview` tab, the `Instance Connection Name` field is under the `Connect to this instance` section.
-    
-    Open a terminal and define the following variables:
-    * DIR_PATH_CREDENTIALS: local path to the directory containing the credentials you just generated and downloaded
-    * INSTANCE_NAME: the instance connection name you just found in the GCP console
-    * CREDENTIALS: name of the credentials file
-    For example:
-    ``` 
-    $ export DIR_PATH_CREDENTIALS=/home/you/Downloads
-    $ export INSTANCE_NAME=my-awesome-project:europe-west1:database-instance-id
-    $ export CREDENTIALS=service-account-credentials.json
-    ```
-    Start the cloud SQL proxy container:
-    ```
-    $ docker run -p 127.0.0.1:5432:5432 --name cloud-sql-proxy -v ${DIR_PATH_CREDENTIALS}:/opt b.gcr.io/cloudsql-docker/gce-proxy /cloud_sql_proxy -instances=${INSTANCE_NAME}=tcp:0.0.0.0:5432 -credential_file=/opt/${CREDENTIALS}
-    ```
-
-### Kubernetes
-1. **Telepresence**:
-    Just follow the script given on https://www.telepresence.io/reference/install
-    ```
-    curl -s https://packagecloud.io/install/repositories/datawireio/telepresence/script.deb.sh | sudo bash sudo apt install --no-install-recommends telepresence
-    ```
-    Telepresence is using the kubectl commands so you just have to connect to your cluster using the command line given in the google cloud platform console.
-    Since we enabled the k8s network policies, we need to deploy the telepresence node we will later connect to by applying the following file: telepresence.yaml
-    ```
-    kubectl apply -f /tmp/telepresence.yaml
-    ```
-    
-    Then you just have to type Telepresence in your console: all the cluster IPs are proxyfied automatically.
-    ```
-    telepresence --deployment telepresence --run-shell --also-proxy SOME.IP.TO.PROXYFY
-    ```
-    
-    The swap deployment is useful as it replace the current deployment by your local environment. So you are able to debug the code being edited in goland. In order to do the replacement, telepresence sets the replicaset to 0 in your cluster.
-    The following command is used to replace the format-worker deployment:
-    ```
-    telepresence --also-proxy 192.168.1.249 --also-proxy 192.168.1.250 --swap-deployment format-worker
-    ```
-    In the case of an non-worker pod, you must add --expose 8080 to bind the port in the cluster
-
-1. Switch faster between clusters and namespaces in kubectl with [kubectx](https://kubectx.dev).
-
-1. [K9s](https://github.com/derailed/k9s) provides a curses based terminal UI to interact with your Kubernetes clusters. The aim of this project is to make it easier to navigate, observe and manage your applications in the wild. K9s continually watches Kubernetes for changes and offers subsequent commands to interact with observed Kubernetes resources.
-
-1. [`kind`](https://github.com/kubernetes-sigs/kind) is a very useful tool for running local Kubernetes clusters using Docker container "nodes".
-
 ## Languages and frameworks
-
 ### Shell
 1. Bash [aliases](assets/bash/.bash_aliases)
 
@@ -176,6 +113,67 @@
 ### Rust
 1. [`gotham`](https://gotham.rs/) is a flexible web framework that promotes stability, safety, security and speed. The documentation is
 full of _almost ready-to-use_ examples which make it a very user-friendly framework.
+
+## Containers
+### Docker
+1. **Use Cloud SQL with the google proxy side container**:
+    In order to proxify a cloudSQL POSTGRES instance in a sideContainer, you will need a service account with one of this roles :
+    * Cloud SQL > Cloud SQL Client
+    * Cloud SQL > Cloud SQL Editor
+    * Cloud SQL > Cloud SQL Admin
+    
+    Once this service account is created, you will need a service-account key to be available locally. To generate one, 
+    go to the IAM page of this service account (GCP console > IAM & admin > Service accounts), generate one and download it.
+    
+    Retrieve the Instance Connection Name field: 
+    * Go to GCP console > SQL
+    * Select the instance you want to access to
+    * In the `Overview` tab, the `Instance Connection Name` field is under the `Connect to this instance` section.
+    
+    Open a terminal and define the following variables:
+    * DIR_PATH_CREDENTIALS: local path to the directory containing the credentials you just generated and downloaded
+    * INSTANCE_NAME: the instance connection name you just found in the GCP console
+    * CREDENTIALS: name of the credentials file
+    For example:
+    ``` 
+    $ export DIR_PATH_CREDENTIALS=/home/you/Downloads
+    $ export INSTANCE_NAME=my-awesome-project:europe-west1:database-instance-id
+    $ export CREDENTIALS=service-account-credentials.json
+    ```
+    Start the cloud SQL proxy container:
+    ```
+    $ docker run -p 127.0.0.1:5432:5432 --name cloud-sql-proxy -v ${DIR_PATH_CREDENTIALS}:/opt b.gcr.io/cloudsql-docker/gce-proxy /cloud_sql_proxy -instances=${INSTANCE_NAME}=tcp:0.0.0.0:5432 -credential_file=/opt/${CREDENTIALS}
+    ```
+
+### Kubernetes
+1. **Telepresence**:
+    Just follow the script given on https://www.telepresence.io/reference/install
+    ```
+    curl -s https://packagecloud.io/install/repositories/datawireio/telepresence/script.deb.sh | sudo bash sudo apt install --no-install-recommends telepresence
+    ```
+    Telepresence is using the kubectl commands so you just have to connect to your cluster using the command line given in the google cloud platform console.
+    Since we enabled the k8s network policies, we need to deploy the telepresence node we will later connect to by applying the following file: telepresence.yaml
+    ```
+    kubectl apply -f /tmp/telepresence.yaml
+    ```
+    
+    Then you just have to type Telepresence in your console: all the cluster IPs are proxyfied automatically.
+    ```
+    telepresence --deployment telepresence --run-shell --also-proxy SOME.IP.TO.PROXYFY
+    ```
+    
+    The swap deployment is useful as it replace the current deployment by your local environment. So you are able to debug the code being edited in goland. In order to do the replacement, telepresence sets the replicaset to 0 in your cluster.
+    The following command is used to replace the format-worker deployment:
+    ```
+    telepresence --also-proxy 192.168.1.249 --also-proxy 192.168.1.250 --swap-deployment format-worker
+    ```
+    In the case of an non-worker pod, you must add --expose 8080 to bind the port in the cluster
+
+1. Switch faster between clusters and namespaces in kubectl with [kubectx](https://kubectx.dev).
+
+1. [K9s](https://github.com/derailed/k9s) provides a curses based terminal UI to interact with your Kubernetes clusters. The aim of this project is to make it easier to navigate, observe and manage your applications in the wild. K9s continually watches Kubernetes for changes and offers subsequent commands to interact with observed Kubernetes resources.
+
+1. [`kind`](https://github.com/kubernetes-sigs/kind) is a very useful tool for running local Kubernetes clusters using Docker container "nodes".
 
 
 ## Documentation
