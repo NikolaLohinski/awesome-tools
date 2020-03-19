@@ -10,7 +10,7 @@
 # Awesome tools [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 - [Languages & frameworks](#languages-and-frameworks)
-  - [Shell](#shell)
+  - [Bash](#bash)
   - [Golang](#golang)
   - [Javascript](#javascript)
     - [Node](#node)
@@ -30,7 +30,7 @@
   - [Software](#software)
   
 ## Languages and frameworks
-### Shell
+### Bash
 1. Bash [aliases](assets/bash/.bash_aliases)
 
 1. [fzf](https://github.com/junegunn/fzf) : an interactive Unix filter fuzzy finder for command-line that can be used with any list; files, command history, processes, hostnames, etc... ;
@@ -68,6 +68,17 @@
 
 1. [`direnv`](https://direnv.net/) is a shell extension. It adds a new feature that can load and unload environment variables depending on the current directory.
 
+1. To open any new terminal in the directory that was visited last, simply add the following lines at the end of your `~/.bashrc`:
+    ```bash
+    PROMPT_COMMAND="$PROMPT_COMMAND; pwd > \"${XDG_RUNTIME_DIR}/.cwd\""
+    [[ -f "${XDG_RUNTIME_DIR}/.cwd" ]] && cd "$(< ${XDG_RUNTIME_DIR}/.cwd)"
+   ```
+   
+    And add the following line to your `~/.bash_profile`, in order to reset the `.cwd` when you open a new session:
+    ```bash
+    echo ${HOME} > \"${XDG_RUNTIME_DIR}/.cwd\""
+   ```
+   
 ### Golang
 1. Output a test coverage report easily :
    ```
