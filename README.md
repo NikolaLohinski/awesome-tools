@@ -222,6 +222,7 @@ full of _almost ready-to-use_ examples which make it a very user-friendly framew
 
    $ exit 
    ```
+1. To install easily AUR packages on an Archlinux/Manjaro OS, one can use [`pacaur`](https://github.com/E5ten/pacaur), which mimics `pacman` with AUR packages.
   
 ### Software
 1. [Bitwarden](https://bitwarden.com/) is an opensource authentication management solution to help handle passwords, keys, sensitive data etc...
