@@ -238,6 +238,18 @@ mode "$mode_ide" {
     bindsym Escape mode "default"
 }
 
+# Move workspaces between screens
+bindsym $mod+Shift+m mode "$mode_move_workspace"
+set $mode_move_workspace move workspace
+mode "$mode_move_workspace" {
+    bindsym h move workspace to output left
+    bindsym j move workspace to output down
+    bindsym k move workspace to output up
+    bindsym l move workspace to output right
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
