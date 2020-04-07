@@ -1,0 +1,10 @@
+lab-issue2branch(){(set -e
+    if [[ $# -eq 0 || $1 != +([0-9]) ]]; then
+        echo "Valid issue number is required. \"$1\" was provided"
+        return 1
+    fi
+    local issue=$(lab issue show $1)
+    local title=$(echo "${issue}" | grep "#" | head -n 1)
+    git checkout -b $(git tobrname "${title}")
+)}
+
