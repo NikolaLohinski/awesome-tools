@@ -9,8 +9,8 @@ alias morewatchers="echo fs.inotify.max_user_watches=524288 | sudo tee /etc/sysc
 # Editor
 alias e="nano"
 # File navigator
-alias l="ranger ."
-alias f="ranger ."
+alias l=". ranger"
+alias f=". ranger"
 # Fast command line copy to clipboard (use as such toclipboard '...command...')
 toclipboard() {
   eval "$1" | xclip -selection c
