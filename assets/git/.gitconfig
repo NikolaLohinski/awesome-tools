@@ -22,9 +22,9 @@
 	fxp = rebase -i HEAD~10
 	hist = log --pretty=format:'%Cred%h%Creset %C(yellow)<%an>%Creset %s %Cgreen(%cr)' --abbrev-commit
 	tobrname = "!_() { echo \"$1\" | sed \"s/\\(.*\\)/\\L\\1/g\" | sed \"s/[^abcdefghijklmnopqrstuvwxyz0123456789]/-/g\" | sed \"s/-\\+/-/g\" | sed \"s/[-]\\(.*\\)/\\1/g\" | cut -c1-255; }; _"
+	delete-remote = push origin --delete
 [core]
 	editor = nano
 	excludesfile = /home/agent-k/.gitignore
 [push]
     default = current
-q
