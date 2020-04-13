@@ -8,3 +8,11 @@ lab-issue2branch(){(set -e
     git checkout -b $(git tobrname "${title}")
 )}
 
+lab-branch2mr(){(set -e
+    local branch="$(git rev-parse --abbrev-ref HEAD)"
+    local id=(${branch//-/ })
+    local issue=$(lab issue show ${id})
+    local title=$(echo "${issue}" | grep "#" | head -n 1 | sed -e "s/^#${id} //" | sed "s/'/ /g" | sed "s/[ ]\+/ /g")
+    lab mr new -d -m "${title}" -m "Closes #${id}"
+    lab mr browse
+)}
