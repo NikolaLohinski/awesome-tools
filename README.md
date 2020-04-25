@@ -10,7 +10,7 @@
 # Awesome tools [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 - [Languages & frameworks](#languages-and-frameworks)
-  - [Bash](#bash)
+  - [Shell](#shell)
   - [Golang](#golang)
   - [Javascript](#javascript)
     - [Node](#node)
@@ -30,7 +30,7 @@
   - [Software](#software)
   
 ## Languages and frameworks
-### Bash
+### Shell
 1. Bash [aliases](assets/bash/.bash_aliases)
 
 1. [fzf](https://github.com/junegunn/fzf) : an interactive Unix filter fuzzy finder for command-line that can be used with any list; files, command history, processes, hostnames, etc... ;
@@ -45,6 +45,8 @@
    EOF
    ```
 1. As an alternative to `find`, [`fd`](https://github.com/sharkdp/fd) is written in Rust and drastically more efficient ;
+
+1. As an enhanced alternative to `cat`, [`bat`](https://github.com/sharkdp/bat) is written in Rust and supports a large number of languages syntax hightligthing ;
 
 1. [`entr`](https://github.com/eradman/entr) is a nice independent utility for running arbitrary commands when files change ;
 

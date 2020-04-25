@@ -22,6 +22,10 @@ tobase64(){
   echo $1 | base64 | toclipboard
 }
 
+# Rust enhanced alternatives to unix commands
+alias find="fd"
+alias cat="bat"
+
 # Get now time formatted in RFC3339
 alias now="date --rfc-3339=ns | sed 's/ /T/; s/\(\....\).*\([+-]\)/\1\2/g'"
 
