@@ -14,9 +14,9 @@
 	cm = commit
 	cmnd = commit --amend
 	frc = push --force-with-lease
-	wip = commit -m 'WIP: ⚠️ DO NOT MERGE THIS COMMIT ⚠️'
-	review = commit -m 'fix: code review'
-	obliviate = reset --hard
+	wip = "!_(){ git commit --message \"wip($(git rev-parse --abbrev-ref HEAD)): $1\n\n⚠️ DO NOT MERGE THIS COMMIT ⚠️\";}; _"
+	review = "!_(){ git commit -m \"fix($1): code review\"; }; _"
+	obliviate = ! git stash -q --include-untracked && git stash drop -q
 	prev = checkout HEAD^1
 	next = "!sh -c 'git log --reverse --pretty=%H master | awk \"/$(git rev-parse HEAD)/{getline;print}\" | xargs git checkout'"
 	fxp = rebase -i HEAD~10
@@ -24,7 +24,7 @@
 	tobrname = "!_() { echo \"$1\" | sed \"s/\\(.*\\)/\\L\\1/g\" | sed \"s/[^abcdefghijklmnopqrstuvwxyz0123456789]/-/g\" | sed \"s/-\\+/-/g\" | sed \"s/[-]\\(.*\\)/\\1/g\" | cut -c1-255; }; _"
 	delete-remote = push origin --delete
 [core]
-	editor = nano
+	editor = vim
 	excludesfile = /home/agent-k/.gitignore
 [push]
     default = current
