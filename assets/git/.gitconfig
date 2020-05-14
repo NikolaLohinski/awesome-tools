@@ -13,14 +13,18 @@
 	ph = push
 	cm = commit
 	cmnd = commit --amend
-	frc = push --force-with-lease
+	frc = force
+	force = push --force-with-lease
 	wip = "!_(){ git commit --message \"wip($(git rev-parse --abbrev-ref HEAD)): $1\n\n⚠️ DO NOT MERGE THIS COMMIT ⚠️\";}; _"
 	review = "!_(){ git commit -m \"fix($1): code review\"; }; _"
 	obliviate = ! git stash -q --include-untracked && git stash drop -q
-	prev = checkout HEAD^1
+	prev = previous
+	previous = checkout HEAD^1
 	next = "!sh -c 'git log --reverse --pretty=%H master | awk \"/$(git rev-parse HEAD)/{getline;print}\" | xargs git checkout'"
-	prp = "!_(){ local branch=$1; if [ \"$branch\" == \"\" ]; then branch=\"origin/master\"; fi; git rb -i HEAD~$(( $(git rev-list --count HEAD ^$branch ) + 1)); }; _"
-	hist = log --pretty=format:'%Cred%h%Creset %C(yellow)<%an>%Creset %s %Cgreen(%cr)' --abbrev-commit
+	prp = prepare
+	prepare = "!_(){ local branch=$1; if [ \"$branch\" == \"\" ]; then branch=\"origin/master\"; fi; git rb -i HEAD~$(( $(git rev-list --count HEAD ^$branch ) + 1)); }; _"
+	hist = history
+	history = log --pretty=format:'%Cred%h%Creset %C(yellow)<%an>%Creset %s %Cgreen(%cr)' --abbrev-commit
 	tobrname = "!_() { echo \"$1\" | sed \"s/\\(.*\\)/\\L\\1/g\" | sed \"s/[^abcdefghijklmnopqrstuvwxyz0123456789]/-/g\" | sed \"s/-\\+/-/g\" | sed \"s/[-]\\(.*\\)/\\1/g\" | cut -c1-255; }; _"
 	delete-remote = push origin --delete
 [core]
