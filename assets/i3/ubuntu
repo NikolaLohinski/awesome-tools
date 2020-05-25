@@ -188,3 +188,6 @@ mode "$mode_move_workspace" {
 # Scratchpad
 bindsym $mod+twosuperior scratchpad show
 bindsym $mod+Shift+asciitilde move scratchpad
+
+# Rename workspace
+bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New name for this workspace: '
