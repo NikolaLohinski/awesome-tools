@@ -81,6 +81,8 @@
     echo ${HOME} > \"${XDG_RUNTIME_DIR}/.cwd\""
    ```
    
+1. A handy shell script that permits writing automated repeatable demos: [demo-magic](https://github.com/paxtonhare/demo-magic)
+
 ### Golang
 1. Output a test coverage report easily :
    ```
@@ -203,6 +205,8 @@ full of _almost ready-to-use_ examples which make it a very user-friendly framew
 1. [Antora](https://antora.org/) is a multi-repository documentation site generator for tech writers who love writing in AsciiDoc ;
 
 1. Create and share beautiful images of your source code with [carbon](https://carbon.now.sh) ;
+
+1. Record and share terminal sessions the right way with [asciinema](https://asciinema.org/) ;
 
 ## Other
 ### Browser
