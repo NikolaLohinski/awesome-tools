@@ -192,6 +192,7 @@ full of _almost ready-to-use_ examples which make it a very user-friendly framew
 
 1. [`kind`](https://github.com/kubernetes-sigs/kind) is a very useful tool for running local Kubernetes clusters using Docker container "nodes".
 
+1. [Kubernetes YAML Generator](https://k8syaml.com/) is a helper tool to define manifests. It provides meaningful explanations for each section of the resource and fillable forms to build your `YAML` file.
 
 ## Documentation
 ### Swagger
