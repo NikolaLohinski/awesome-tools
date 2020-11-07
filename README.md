@@ -94,6 +94,10 @@
 
 1. Manage different versions of Golang with [`gvm`](https://github.com/moovweb/gvm) ;
 
+1. Manage your development workflow with Go in a _Makefile_ way with 
+[mage](https://magefile.org/). This tool can be augmented with 
+[mage-select](https://github.com/iwittkau/mage-select) for easier usage; 
+
 ### Javascript 
 #### Node
 1. [Node Version Manager](https://github.com/nvm-sh/nvm) : POSIX-compliant bash script to manage multiple active `node.js` & `npm` versions ;
