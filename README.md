@@ -83,6 +83,8 @@
    
 1. A handy shell script that permits writing automated repeatable demos: [demo-magic](https://github.com/paxtonhare/demo-magic)
 
+1. [`autojump`](https://github.com/wting/autojump) is a simple terminal tool to never ever right `cd <somewhere>` again
+
 ### Golang
 1. Output a test coverage report easily :
    ```
