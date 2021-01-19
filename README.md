@@ -90,7 +90,7 @@
    ```bash
    $ function prefix_variables() {
        while IFS= read -r v; do 
-         export "$2_${v}"=$(printf '%s\n' "${!v}");
+         export "$2_${v}=$(printf '%s\n' ${!v})";
        done < <(compgen -A variable | grep "^$1_");
      }
 
