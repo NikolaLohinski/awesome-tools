@@ -85,6 +85,20 @@
 
 1. [`autojump`](https://github.com/wting/autojump) is a simple terminal tool to never ever right `cd <somewhere>` again
 
+1. Whene working in an CI environment such as Gitlab's CI/CD or Github Actions, one usually needs to access the predefined environment variables. Those are usually prefixed with unchanged characters such as `CI_`. But some tools (such as `cypress`) require an other prefix to autoload variable such as those. To overcome this issue, a little shell script such as the following shoud suffice:
+
+   ```bash
+   $ function prefix_variables() {
+       while IFS= read -r v; do 
+         export "$2_${v}"=$(printf '%s\n' "${!v}");
+       done < <(compgen -A variable | grep "^$1_");
+     }
+
+   $ export PREFIX_VAR="value"
+   $ prefix_variables "PREFIX" "PRE"
+   $ echo ${PRE_PREFIX_VAR}
+   value
+   ```
 ### Golang
 1. Output a test coverage report easily :
    ```
