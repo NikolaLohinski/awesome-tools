@@ -18,7 +18,9 @@
   - [Python](#python)
   - [Git](#git)
   - [Rust](#rust)
+  - [Cross language](#cross-language)
 - [Containers](#containers)
+  - [CI/CD](#ci/cd)
   - [Docker](#docker)
   - [Kubernetes](#kubernetes)
 - [Documentation](#documentation)
@@ -30,6 +32,7 @@
   - [Software](#software)
   
 ## Languages and frameworks
+
 ### Shell
 1. Bash [aliases](assets/bash/.bash_aliases)
 
@@ -149,9 +152,17 @@
 
 ### Rust
 1. [`gotham`](https://gotham.rs/) is a flexible web framework that promotes stability, safety, security and speed. The documentation is
-full of _almost ready-to-use_ examples which make it a very user-friendly framework.
+full of _almost ready-to-use_ examples which make it a very user-friendly framework ;
+
+### Cross language
+1. Use [`quicktype`](https://quicktype.io/) to convert JSON into gorgeous, type-safe code in any language ;
 
 ## Containers
+
+### CI/CD
+
+1. Repeatable and understandable builds with [Earthly](https://earthly.dev/) that merges makefiles & dockerfiles ;
+
 ### Docker
 1. **Use Cloud SQL with the google proxy side container**:
     In order to proxify a cloudSQL POSTGRES instance in a sideContainer, you will need a service account with one of this roles :
